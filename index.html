@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 <title>Daniel's HVAC</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -186,13 +187,36 @@ img {vertical-align: middle;}
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 15px;
+    text-align:center;
+  font-family: 'Poppins';
+  font-weight: normal;
+  color: #ff0000;
+  line-height: 38px;
+  text-transform: uppercase;
+  margin: 0px 0px 250px;
+  font-size: 40px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
   width: 100%;
   text-align: center;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+text-rendering: optimizeLegibility !important;
+-webkit-font-smoothing: antialiased !important;
+-webkit-text-stroke: .025em rgba(51,51,51,0.50);
 }
+
+.text span {
+  background:
+    linear-gradient(65deg , transparent 50%,rgba(57, 57, 56, 0.7) 50%) left no-repeat, 
+    linear-gradient(0deg , rgba(57, 57, 56, 0.7),rgba(57, 57, 56, 0.7)) 30px 0 no-repeat;
+  
+  background-size:30px 100%, 100% 100%;
+  width:200px;
+  height:60px;
+  padding:0 20px;
+  margin:20px auto;
+  }
 
 /* Number text (1/3 etc) */
 .numbertext {
@@ -266,7 +290,7 @@ img {vertical-align: middle;}
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
   <img src="test2.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
+  <div class="text"><span>FAMILY OWNED AND OPERATED SINCE 2007</span></div>
 </div>
 
 <div class="mySlides fade">
