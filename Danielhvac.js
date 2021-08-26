@@ -13,8 +13,8 @@ $('#slideshow-overall').mouseleave(function(){
   }, 5000);
 });
 
-
-
+// $("#slide").animate({width:'toggle'},350);
+//
 function changePosition() {
     if(currentPosition == numberOfSlides - 1) {
         currentPosition = 0;
