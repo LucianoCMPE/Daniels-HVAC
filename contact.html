@@ -19,22 +19,23 @@
             emailjs.init('user_Vw70IhVeYASuMPbsekXNE');
         })();
     </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
+		<script type="text/javascript">
+				window.onload = function() {
+						document.getElementById('contact-form').addEventListener('submit', function(event) {
+								event.preventDefault();
+								// generate a five digit number for the contact_number variable
+								this.contact_number.value = Math.random() * 100000 | 0;
+								// these IDs from the previous steps
+								emailjs.sendForm('service_q216wto', 'template_gxtvq8m', this)
+										.then(function() {
+												console.log('SUCCESS!');
+												document. getElementById("contact-form"). reset();
+										}, function(error) {
+												console.log('FAILED...', error);
+										});
+						});
+				}
+		</script>
 <style>
 body {
 	font-family: Arial, Helvetica, sans-serif;
@@ -275,10 +276,10 @@ input[type=submit]:hover {
     <div class="column">
       <form id = "contact-form">
 				<input type="hidden" name="contact_number">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="from_name">First and last name</label>
+        <input type="text" name="from_name" id="from_name">
+        <!-- <label>Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.."> -->
         <label for="country">County</label>
         <select id="country" name="County">
           <option value="australia">Anne Arundel</option>
@@ -288,6 +289,7 @@ input[type=submit]:hover {
         <label for="subject">Subject</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
         <input type="submit" value="Submit">
+
       </form>
     </div>
   </div>
