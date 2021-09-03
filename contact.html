@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel=”stylesheet” href="http://t4t5.github.io/sweetalert/dist/sweetalert.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel = "emailjs" href = "https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
@@ -30,8 +33,11 @@
 										.then(function() {
 												console.log('SUCCESS!');
 												document. getElementById("contact-form"). reset();
+												swal("Success!", "Your message has been sent!", "success");
 										}, function(error) {
 												console.log('FAILED...', error);
+												swal ( "Oops" ,  "Message could not be sent!" ,  "error" )
+
 										});
 						});
 				}
@@ -279,10 +285,10 @@ input[type=submit]:hover {
         <label for="from_name">First and last name</label>
         <input type="text" name="from_name" id="from_name">
         <label for="country">County</label>
-        <select id="country" name="County">
-          <option value="australia">Anne Arundel</option>
-          <option value="canada">Baltimore</option>
-          <option value="usa">Harford</option>
+        <select id="location" name="location">
+          <option value="Anne Arundel">Anne Arundel</option>
+          <option value="Baltimore">Baltimore</option>
+          <option value="Harford">Harford</option>
         </select>
         <label for="message">Subject</label>
         <textarea type = "text" id="message" name="message" placeholder="Write something.." style="height:170px"></textarea>
